@@ -1,0 +1,7 @@
+.mouse {
+    transition: all .3s ease-in-out;
+}
+
+.mouse:hover {
+    transform: scale(1.05);
+}

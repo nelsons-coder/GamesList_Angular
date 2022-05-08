@@ -1,0 +1,26 @@
+small {
+    background-color: rgb(200, 70, 70);
+    color: white;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+a:link, a:hover {
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+}
+
+img {
+    height: 250px;
+}
+
+.bx {
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.7);
+}
+
+
