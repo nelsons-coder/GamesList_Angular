@@ -13,16 +13,11 @@ export class CardComponent implements OnInit {
   @Input()
   game : Game;
 
-  constructor(private gameService : GameService) { 
-    
-  }
 
-  ngOnInit(): void {
-  }
+  constructor(private gameService : GameService) { }
 
-  gamePrice() : string {
-    return this.game.price > 0 ? `${this.game.price} €` : 'Grátis';
-  }
+  ngOnInit(): void { }
+
 
   changeColor() : string {
     return this.game.price > 0 ? 'rgb(200, 70, 70)' : 'green';

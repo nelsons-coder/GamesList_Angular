@@ -2,11 +2,11 @@
     <div class="read card text-dark bg-dark mb-3">
         <div class="card-header bg-danger text-center"></div>
         <div class="card-body">
-            <img *ngIf="!video" class="card-img-top" src="{{game.img}}" alt="{{game.name}}">
+            <img *ngIf="!trailer" class="card-img-top" src="{{game.img}}" alt="{{game.name}}">
             <hr>
             <div class="d-flex justify-content-center">
-                <button *ngIf="!video" class="btn btn-danger text-dark" (click)="showVideo()">Assistir Trailer</button>
-                <iframe *ngIf="video" [src]="game.trailer | safe "></iframe>
+                <button *ngIf="!trailer" class="btn btn-danger text-dark" (click)="showVideo()">Assistir Trailer</button>
+                <iframe *ngIf="trailer" [src]="game.trailer | safe "></iframe>
             </div>
             <hr>
             <h2 class="text-danger text-center">{{game.name}}</h2>
@@ -18,7 +18,7 @@
             <hr>
             <h6 class="text-muted">Data de Lançamento: <span class="text-light">{{game.launchDate}}</span></h6>
             <hr>
-            <h6 class="text-muted">Preço: <span class="text-light">{{gamePrice()}}</span></h6>
+            <h6 class="text-muted">Preço: <span class="text-light">{{game.priceToString()}}</span></h6>
         </div>
         <div class="card-footer bg-danger text-end "><button class="btn btn-dark text-danger" routerLink="/" (click)="removeGame()">Remover</button></div>
     </div>

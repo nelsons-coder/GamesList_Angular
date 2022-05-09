@@ -5,7 +5,7 @@
         <h4 class="card-text"><b>{{game.name}}</b></h4>
         <p class="text-muted">{{game.type}}</p>
         <div class="d-flex justify-content-end align-items-center">
-            <small [ngStyle]="{'background-color': changeColor()}">{{gamePrice()}}</small>
+            <small [ngStyle]="{'background-color': changeColor()}">{{game.priceToString()}}</small>
         </div>
         </div>
     </a>
