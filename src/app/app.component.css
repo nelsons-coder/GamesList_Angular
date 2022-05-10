@@ -1,7 +1,15 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 hr {
     width: 75%;
     border-top: 3px dotted red;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+fa-icon {
+    color: #212529;
 }

@@ -10,8 +10,8 @@ import { GameService } from 'services/game.service';
 })
 export class ReadComponent implements OnInit {
 
-  // Nome do Jogo no parametro
-  name : string;
+  // ID do Jogo no parametro
+  id : number;
 
   // Jogo escolhido pelo parametro
   game : Game; 
@@ -19,17 +19,14 @@ export class ReadComponent implements OnInit {
   // Booleano para a opção de mostrar o trailer do Jogo
   trailer : boolean = false;
 
+  // Index do jogo a ser eliminado
+  index : number;
+
   constructor(private gameService : GameService, private activateRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.name = this.activateRoute.snapshot.params['name'];
-    // this.gameService.gameList.forEach((game, i) => {
-    //   if(game.name == this.name){
-    //     this.game = game;                                    <------- Perguntar ao stor!!!!!
-    //     this.index = i;       
-    //   }
-    // });
-    this.game = this.gameService.findGame(this.name);
+    this.id = this.activateRoute.snapshot.params['id'];
+    this.game = this.gameService.findGame(this.id);
   }
 
   showVideo() : boolean {
@@ -37,7 +34,8 @@ export class ReadComponent implements OnInit {
   }
 
   removeGame() : void {
-    this.gameService.removeGamePost(this.game.index);
+    this.index = this.gameService.findGameByID(this.id)
+    this.gameService.removeGame(this.index);
   }
   
 

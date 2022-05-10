@@ -8,7 +8,7 @@ import { ReadComponent } from './read/read.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'create', component: CreateComponent},
-  {path: 'read/:name', component: ReadComponent},
+  {path: 'read/:id/:name', component: ReadComponent},
   {path: '**', component: NotfoundComponent}
 ];
 

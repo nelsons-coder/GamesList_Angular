@@ -9,27 +9,30 @@ import { GameService } from 'services/game.service';
 })
 export class CreateComponent implements OnInit {
 
-  game : Game;
-
-  name : string;
-  description : string;
-  type : string;
-  price : number;
-  developer : string;
-  launchDate : string;
-  img : string;
-  trailer : string;
+  // Jogo inicializado apenas para guardar os dados do User
+  game : Game = new Game('', null, '', '', null, '', new Date(), '', '');
 
   constructor(private gameService : GameService) { }
 
   ngOnInit(): void {
   }
 
-  createPostGame() {
-    if(this.name == undefined) return; // Não cria um Jogo se o campo "Nome" estiver vazio!
-    this.game = new Game(this.name, this.description, this.type, this.price, this.developer, this.launchDate, this.img, this.trailer);
-    
-    this.gameService.createGamePost(this.game);
+  createID() : number {
+    let aux : number = 0;
+    let num : number;
+    while(aux == 0){
+        num = Math.floor(Math.random() * 10000);
+        if (!this.gameService.checkID(num)) {
+          aux = 1;
+        }
+    }
+    return num;
+  }
+
+  createGame() : void {
+    if(this.game.name == '') return; // Não cria um Jogo se o campo "Nome" estiver vazio!
+    this.game = new Game(this.game.name, this.createID(), this.game.description, this.game.type, this.game.price, this.game.developer, this.game.launchDate, this.game.img, this.game.adaptTrailer());
+    this.gameService.createGame(this.game);
   }
 
 

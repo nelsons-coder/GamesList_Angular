@@ -6,7 +6,6 @@ import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons';
 import { GameService } from 'services/game.service';
 
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
