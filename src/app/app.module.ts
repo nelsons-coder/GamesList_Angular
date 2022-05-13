@@ -18,6 +18,7 @@ import { GameCardComponent } from './game-card/game-card.component';
 import { LoadingComponent } from './loading/loading.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,4 +1,4 @@
-p {
+b {
     color: black;
     padding: 0px 10px;
 }
@@ -18,9 +18,13 @@ img {
 }
 
 .card {
-    height: 400px;
+    max-height: 400px;
 }
 
 .bx {
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.7);
+}
+
+.bord {
+    border: 1px solid rgb(53, 53, 53);
 }

@@ -9,6 +9,12 @@
 button {
     border-radius: 50%;
     margin: 10px;
+    transition: all .3s linear;
+}
+
+button:hover {
+    transform: scale(0.85);
+    color: black;
 }
 
 button:focus {
