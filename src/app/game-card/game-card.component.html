@@ -1,10 +1,12 @@
 <div class="bx card mb-4 shadow-md border border-dark">
-    <img class="card-img-top" src="{{game.background_image}}" alt="{{game.name}}">
-    <div class="card-body">
-    <h4 class="card-text"><b>{{game.name}}</b></h4>
-    <p class="text-muted">{{game.released}}</p>
-    <div class="d-flex justify-content-end align-items-center">
-        <small>{{game.rating}}</small>
-    </div>
+    <div (click)="alertInfo()">
+        <img class="card-img-top" src="{{game.background_image}}" alt="{{game.name}}">
+        <div class="card-body">
+        <h4 class="card-text"><b>{{game.name}}</b></h4>
+        <p class="text-muted">{{game.released}}</p>
+        <div class="d-flex justify-content-end align-items-center">
+            <b class="">{{game.rating_top}}<fa-icon class="mx-1 text-warning" [icon]="faStar" size="lg"></fa-icon></b>
+        </div>
+        </div>
     </div>
 </div>

@@ -1,3 +1,5 @@
+<app-loading *ngIf="loading; else loaded" ></app-loading>
+<ng-template #loaded>
 <div class="container">
   <nav class="d-flex justify-content-center">
     <ul class="pagination">
@@ -36,3 +38,4 @@
         </ul>
       </nav>
 </div>
+</ng-template>

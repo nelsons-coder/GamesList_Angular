@@ -1,7 +1,5 @@
-small {
-    background-color: rgb(200, 70, 70);
-    color: white;
-    border-radius: 5px;
+p {
+    color: black;
     padding: 0px 10px;
 }
 

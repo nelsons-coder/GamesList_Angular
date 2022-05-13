@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="navbar navbar-light bg-danger justify-content-space p-0 mb-5">
-        <a class="d-flex navbar-brand text-light align-items-center" routerLink="/">
+        <a class="d-flex navbar-brand text-light align-items-center" (click)="botaoVersaoOff()" routerLink="/">
             <h1 class="d-inline text-dark mx-1">{{"['"}}</h1>
             <fa-icon class="mx-1" [icon]="faGamepad" size="2x"></fa-icon>
             <h1 class="d-inline text-dark mx-1">{{"','"}}</h1>
@@ -20,9 +20,9 @@
             <h1 class="d-inline text-dark mx-1">{{"']"}}</h1>
         </a>
         <div>
-            <button *ngIf="!versaoOn; else manual" (click)="botaoVersao()" class="btn btn-dark m-2 text-danger" routerLink="/api">Versão Automática</button>
+            <button *ngIf="!versaoOn; else manual" (click)="botaoVersaoOn()" class="btn btn-dark m-2 text-danger" routerLink="/api">Versão Automática</button>
             <ng-template #manual>
-                <button (click)="botaoVersao()" class="btn btn-dark m-2 text-danger" routerLink="/">Versão Manual</button>
+                <button (click)="botaoVersaoOff()" class="btn btn-dark m-2 text-danger" routerLink="/">Versão Manual</button>
             </ng-template>
             <button *ngIf="!versaoOn" class="btn btn-dark m-2 text-danger" routerLink="/create">+</button>
         </div>

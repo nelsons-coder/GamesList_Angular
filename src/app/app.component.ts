@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { faChessKnight } from '@fortawesome/free-solid-svg-icons';
 import { faDiceSix } from '@fortawesome/free-solid-svg-icons';
@@ -14,20 +14,23 @@ import { GameService } from 'services/game.service';
 })
 
 export class AppComponent {
+
   title = 'Games';
   faGamepad = faGamepad;
   faChessKnight = faChessKnight;
   faDiceSix = faDiceSix;
   faPuzzlePiece = faPuzzlePiece;
 
+
+  // Variavel para botão de Versão
   versaoOn : boolean = false;
 
-  botaoVersao() {
-    if (!this.versaoOn) {
-      this.versaoOn = true;
-    } else {
-      this.versaoOn = false;
-    }
+  botaoVersaoOn() : void {
+    this.versaoOn = true;
+  }
+
+  botaoVersaoOff() : void {
+    this.versaoOn = false;
   }
 
 }

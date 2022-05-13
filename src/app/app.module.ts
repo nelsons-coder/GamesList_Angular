@@ -15,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { GameApiComponent } from './game-api/game-api.component';
 import { CommonModule } from "@angular/common";
 import { GameCardComponent } from './game-card/game-card.component';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { GameCardComponent } from './game-card/game-card.component';
     NotfoundComponent,
     SafePipe,
     GameApiComponent,
-    GameCardComponent
+    GameCardComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
