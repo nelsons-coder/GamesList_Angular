@@ -14,9 +14,9 @@ export class CreateComponent implements OnInit {
 
   constructor(private gameService : GameService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+  // Atribui um ID random
   createID() : number {
     let aux : number = 0;
     let num : number;
@@ -29,6 +29,7 @@ export class CreateComponent implements OnInit {
     return num;
   }
 
+  // Cria o jogo
   createGame() : void {
     if(this.game.name == '') return; // Não cria um Jogo se o campo "Nome" estiver vazio!
     this.game = new Game(this.game.name, this.createID(), this.game.description, this.game.type, this.game.price, this.game.developer, this.game.launchDate, this.game.img, this.game.adaptTrailer());

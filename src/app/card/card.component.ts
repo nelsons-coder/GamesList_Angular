@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Game } from 'models/Games';
 import { GameService } from 'services/game.service';
 
@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
   game : Game;
 
 
-  constructor(private gameService : GameService) { }
+  constructor() { }
 
   ngOnInit(): void { }
 

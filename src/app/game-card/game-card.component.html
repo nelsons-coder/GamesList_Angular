@@ -7,17 +7,18 @@
         <div class="bord modal-body bg-dark">
           <p class="text-secondary">Página de detalhe não implementada para a API!</p>
         </div>
-        <div class="bord modal-footer bg-dark">
-          <button type="button" class="btn btn-danger text-dark" (click)="modal.close('Close click')">Close</button>
+        <div class="bord modal-footer bg-danger">
+          <button type="button" class="btn btn-dark text-danger" (click)="modal.close('Close click')">Close</button>
         </div>
-      </ng-template>
+    </ng-template>
     <div (click)="openVerticallyCentered(content)">
-        <img class="card-img-top" src="{{game.background_image}}" alt="{{game.name}}">
+      <div>
+        <img class="card-img-top" src="{{gameAPI.background_image}}" alt="{{gameAPI.name}}">
         <div class="card-body">
-        <h4 class="card-text"><b>{{game.name}}</b></h4>
-        <p class="text-muted">{{game.released}}</p>
+        <h5 class="card-text"><b>{{gameAPI.name}}</b></h5>
+        <p class="text-muted">{{gameAPI.released}}</p>
         <div class="d-flex justify-content-end align-items-center">
-            <b class="">{{game.rating_top}}<fa-icon class="mx-1 text-warning" [icon]="faStar" size="lg"></fa-icon></b>
+            <b class="">{{gameAPI.rating}}<fa-icon class="mx-1 text-warning" [icon]="faStar" size="lg"></fa-icon></b>
         </div>
         </div>
     </div>

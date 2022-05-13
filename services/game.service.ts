@@ -49,7 +49,6 @@ export class GameService {
         });
         return index;
     }
-
     
     checkID(num : number) : boolean {
         let aux : boolean = false;

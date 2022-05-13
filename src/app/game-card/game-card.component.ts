@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { gameAPI } from 'models/gamesAPI';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-game-card',
@@ -10,16 +11,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class GameCardComponent {
 
-  faStar = faStar;
+
+  faStar : IconDefinition = faStar;
 
   @Input()
-  game : gameAPI;
-
+  gameAPI : gameAPI;
 
   constructor(private modalService: NgbModal) { }
 
 
-  openVerticallyCentered(content) {
+  openVerticallyCentered(content) : void {
     this.modalService.open(content, { centered: true });
   }
 

@@ -17,9 +17,8 @@
       </li>
     </ul>
   </nav>
-    <!-- <div class="row justify-content-center"> -->
     <div class="row">
-        <app-game-card class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mouse" *ngFor="let gameAPI of gameListAPI" [game]="gameAPI"></app-game-card>
+        <app-game-card class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mouse" *ngFor="let gameAPI of gameListAPI" [gameAPI]="gameAPI"></app-game-card>
     </div>
     <nav class="d-flex justify-content-center">
         <ul class="pagination">
