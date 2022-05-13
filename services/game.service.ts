@@ -41,9 +41,13 @@ export class GameService {
     }
 
     findGameByID(id : number) : number {
-        return this.gameList.findIndex(() => {
-            return id == this.game.id;
+        let index : number = 0;
+        this.gameList.forEach((game, i) => {
+            if (game.id == id) {
+                index = i;
+            }
         });
+        return index;
     }
 
     

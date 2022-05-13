@@ -1,0 +1,38 @@
+<div class="container">
+  <nav class="d-flex justify-content-center">
+    <ul class="pagination">
+      <li>
+        <button class="btn text-danger" (click)="previousPage()" [disabled]="this.page == 1">
+          <span aria-hidden="true"><fa-icon [icon]="faArrowCircleLeft" size="3x"></fa-icon></span>
+          <span class="sr-only">Previous</span>
+        </button>
+      </li>
+      <li>
+        <button class="btn text-danger" (click)="nextPage()">
+          <span aria-hidden="true"><fa-icon [icon]="faArrowCircleRight" size="3x"></fa-icon></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+    <!-- <div class="row justify-content-center"> -->
+    <div class="row">
+        <app-game-card class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mouse" *ngFor="let gameAPI of gameListAPI" [game]="gameAPI"></app-game-card>
+    </div>
+    <nav class="d-flex justify-content-center">
+        <ul class="pagination">
+          <li>
+            <button class="btn text-danger" (click)="previousPage()" [disabled]="this.page == 1">
+              <span aria-hidden="true"><fa-icon [icon]="faArrowCircleLeft" size="3x"></fa-icon></span>
+              <span class="sr-only">Previous</span>
+            </button>
+          </li>
+          <li>
+            <button class="btn text-danger" (click)="nextPage()">
+              <span aria-hidden="true"><fa-icon [icon]="faArrowCircleRight" size="3x"></fa-icon></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+</div>

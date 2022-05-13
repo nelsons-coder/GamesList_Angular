@@ -20,4 +20,14 @@ export class AppComponent {
   faDiceSix = faDiceSix;
   faPuzzlePiece = faPuzzlePiece;
 
+  versaoOn : boolean = false;
+
+  botaoVersao() {
+    if (!this.versaoOn) {
+      this.versaoOn = true;
+    } else {
+      this.versaoOn = false;
+    }
+  }
+
 }

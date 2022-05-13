@@ -11,6 +11,10 @@ import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { SafePipe } from './safe.pipe';
+import { HttpClientModule } from "@angular/common/http";
+import { GameApiComponent } from './game-api/game-api.component';
+import { CommonModule } from "@angular/common";
+import { GameCardComponent } from './game-card/game-card.component';
 
 
 @NgModule({
@@ -21,14 +25,18 @@ import { SafePipe } from './safe.pipe';
     HomeComponent,
     CardComponent,
     NotfoundComponent,
-    SafePipe
+    SafePipe,
+    GameApiComponent,
+    GameCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

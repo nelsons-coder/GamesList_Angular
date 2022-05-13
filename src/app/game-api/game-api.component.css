@@ -1,0 +1,13 @@
+.mouse {
+    transition: all .3s ease-in-out;
+}
+
+.mouse:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+button {
+    border-radius: 50%;
+    margin: 10px;
+}
