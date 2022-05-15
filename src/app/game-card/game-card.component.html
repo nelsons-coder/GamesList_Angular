@@ -1,14 +1,14 @@
 <div class="bx card mb-4 shadow-md border border-dark">
     <ng-template #content let-modal>
         <div class="bord modal-header bg-danger">
-          <h4 class="modal-title">Alert!!!</h4>
+          <h4 class="modal-title">Alerta!!!</h4>
           <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
         </div>
         <div class="bord modal-body bg-dark">
           <p class="text-secondary">Página de detalhe não implementada para a API!</p>
         </div>
-        <div class="bord modal-footer bg-danger">
-          <button type="button" class="btn btn-dark text-danger" (click)="modal.close('Close click')">Close</button>
+        <div class="bord modal-footer bg-dark">
+          <button type="button" class="btn btn-danger text-dark" (click)="modal.close('Close click')">Close</button>
         </div>
     </ng-template>
     <div (click)="openVerticallyCentered(content)">

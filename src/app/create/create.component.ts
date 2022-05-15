@@ -21,11 +21,19 @@ export class CreateComponent implements OnInit {
     return this.gameService.createID();
   }
 
+  // Validação de Inputs
+  checkForm() : boolean {
+    return (this.game.name == '' || this.game.description == '' || this.game.type == '' || this.game.price == null || this.game.developer == '' || this.game.launchDate == new Date() || this.game.img == '' || this.game.trailer == '') ? false : true;
+  }
+
   // Cria o jogo
   createGame() : void {
-    if(this.game.name == '') return; // Não cria um Jogo se o campo "Nome" estiver vazio!
-    this.game = new Game(this.game.name, this.createID(), this.game.description, this.game.type, this.game.price, this.game.developer, this.game.launchDate, this.game.img, this.game.adaptTrailer());
-    this.gameService.createGame(this.game);
+    if (!this.checkForm()) {
+      return;
+    } else {
+      this.game = new Game(this.game.name, this.createID(), this.game.description, this.game.type, this.game.price, this.game.developer, this.game.launchDate, this.game.img, this.game.adaptTrailer());
+      this.gameService.createGame(this.game);
+    }
   }
 
 }

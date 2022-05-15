@@ -3,6 +3,10 @@
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.7);
 }
 
+img {
+    max-height: 500px;
+}
+
 hr {
     color: red;
 }
