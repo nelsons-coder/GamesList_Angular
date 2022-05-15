@@ -18,15 +18,7 @@ export class CreateComponent implements OnInit {
 
   // Atribui um ID random
   createID() : number {
-    let aux : number = 0;
-    let num : number;
-    while(aux == 0){
-        num = Math.floor(Math.random() * 10000);
-        if (!this.gameService.checkID(num)) {
-          aux = 1;
-        }
-    }
-    return num;
+    return this.gameService.createID();
   }
 
   // Cria o jogo
@@ -35,7 +27,5 @@ export class CreateComponent implements OnInit {
     this.game = new Game(this.game.name, this.createID(), this.game.description, this.game.type, this.game.price, this.game.developer, this.game.launchDate, this.game.img, this.game.adaptTrailer());
     this.gameService.createGame(this.game);
   }
-
-
 
 }

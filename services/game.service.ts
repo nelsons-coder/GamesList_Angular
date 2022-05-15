@@ -58,4 +58,16 @@ export class GameService {
         return aux;
     }
 
+    createID() {
+        let aux : number = 0;
+        let num : number;
+        while(aux == 0){
+            num = Math.floor(Math.random() * 10000);
+            if (!this.checkID(num)) {
+            aux = 1;
+            }
+        }
+        return num;
+    }
+
 }
