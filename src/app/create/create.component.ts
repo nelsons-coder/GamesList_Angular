@@ -31,7 +31,9 @@ export class CreateComponent implements OnInit {
     if (!this.checkForm()) {
       return;
     } else {
-      this.game = new Game(this.game.name, this.createID(), this.game.description, this.game.type, this.game.price, this.game.developer, this.game.launchDate, this.game.img, this.game.adaptTrailer());
+      this.game = new Game(this.game.name, this.createID(), this.game.description, this.game.type, this.game.price, this.game.developer, new Date(this.game.launchDate), this.game.img, this.game.adaptTrailer());
+      console.log(this.game);
+      
       this.gameService.createGame(this.game);
     }
   }

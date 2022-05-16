@@ -29,7 +29,12 @@ export class Game {
     }
 
     adaptTrailer() : string {
-        return `https://www.youtube.com/embed/${this.trailer.split('=')[1]}`;
+        return `https://www.youtube.com/embed/${this.trailer.split('=')[1].split('&')[0]}`;
     }
+
+    adaptDate() : string {
+        return this.launchDate.toLocaleDateString();
+    }
+    
 
 }
